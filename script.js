@@ -14,12 +14,53 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 
+/* ── HAMBURGER MENU ── */
+(function () {
+  const hamburger = document.getElementById('hamburger');
+  const overlay   = document.getElementById('mob-overlay');
+  const mobLinks  = document.querySelectorAll('.mob-link');
+
+  if (!hamburger || !overlay) return;
+
+  function openMenu() {
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', () => {
+    if (overlay.classList.contains('open')) closeMenu();
+    else openMenu();
+  });
+
+  mobLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeMenu();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+})();
+
+
 /* ── HERO STARFIELD CANVAS ── */
 (function () {
   const canvas = document.getElementById('hero-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
-  let W, H, raf;
+  let W, H;
   const COUNT = 140;
   let pts = [];
 
@@ -36,7 +77,7 @@ window.addEventListener('scroll', () => {
       vx: (Math.random() - 0.5) * 0.3,
       vy: (Math.random() - 0.5) * 0.3,
       vz: Math.random() * 0.9 + 0.25,
-      hue: Math.random() < 0.55 ? 262 : (Math.random() < 0.5 ? 174 : 290),
+      hue: Math.random() < 0.55 ? 158 : (Math.random() < 0.5 ? 174 : 142),
     };
   }
 
@@ -60,7 +101,7 @@ window.addEventListener('scroll', () => {
       const sc = fov / (fov + p.z);
       const sx = (p.x - W / 2) * sc + W / 2;
       const sy = (p.y - H / 2) * sc + H / 2;
-      const al = (1 - p.z / 1000) * 0.75;
+      const al = (1 - p.z / 1000) * 0.8;
 
       for (let j = i + 1; j < Math.min(i + 5, pts.length); j++) {
         const q  = pts[j];
@@ -70,20 +111,20 @@ window.addEventListener('scroll', () => {
         const dist = Math.hypot(sx - qx, sy - qy);
         if (dist < 100) {
           ctx.beginPath(); ctx.moveTo(sx, sy); ctx.lineTo(qx, qy);
-          ctx.strokeStyle = `hsla(${p.hue},65%,68%,${(1 - dist / 100) * al * 0.18})`;
-          ctx.lineWidth = 0.4; ctx.stroke();
+          ctx.strokeStyle = `hsla(${p.hue},80%,60%,${(1 - dist / 100) * al * 0.2})`;
+          ctx.lineWidth = 0.5; ctx.stroke();
         }
       }
 
       const r = Math.max(0.4, sc * 2.2);
       ctx.beginPath(); ctx.arc(sx, sy, r, 0, Math.PI * 2);
-      ctx.fillStyle = `hsla(${p.hue},85%,80%,${al})`; ctx.fill();
+      ctx.fillStyle = `hsla(${p.hue},90%,72%,${al})`; ctx.fill();
       if (r > 1.1) {
         ctx.beginPath(); ctx.arc(sx, sy, r * 3, 0, Math.PI * 2);
-        ctx.fillStyle = `hsla(${p.hue},85%,80%,${al * 0.08})`; ctx.fill();
+        ctx.fillStyle = `hsla(${p.hue},90%,72%,${al * 0.1})`; ctx.fill();
       }
     }
-    raf = requestAnimationFrame(draw);
+    requestAnimationFrame(draw);
   }
 
   draw();

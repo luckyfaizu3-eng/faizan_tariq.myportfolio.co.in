@@ -20,15 +20,40 @@
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-logo">faizan<span>.dev</span></div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about" class="nav-link-item">About</a></li>
+      <li><a href="#education" class="nav-link-item">Education</a></li>
+      <li><a href="#skills" class="nav-link-item">Skills</a></li>
+      <li><a href="#projects" class="nav-link-item">Projects</a></li>
+      <li><a href="#contact" class="nav-link-item">Contact</a></li>
     </ul>
-    <a href="https://faizupyzone.shop" target="_blank" rel="noreferrer" class="nav-btn">↗ Pyskill</a>
+    <div class="nav-right">
+      <a href="https://faizupyzone.shop" target="_blank" rel="noreferrer" class="nav-btn">↗ Pyskill</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
   </nav>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mob-overlay" id="mob-overlay">
+    <div class="mob-menu" id="mob-menu">
+      <ul class="mob-links">
+        <li><a href="#about" class="mob-link">About</a></li>
+        <li><a href="#education" class="mob-link">Education</a></li>
+        <li><a href="#skills" class="mob-link">Skills</a></li>
+        <li><a href="#projects" class="mob-link">Projects</a></li>
+        <li><a href="#contact" class="mob-link">Contact</a></li>
+      </ul>
+      <a href="https://faizupyzone.shop" target="_blank" rel="noreferrer" class="mob-cta">↗ Visit Pyskill</a>
+      <div class="mob-socials">
+        <a href="https://instagram.com/code_with_06" target="_blank" rel="noreferrer" class="mob-soc">Instagram @code_with_06</a>
+        <a href="https://github.com/luckyfaizu3-eng" target="_blank" rel="noreferrer" class="mob-soc">GitHub luckyfaizu3-eng</a>
+      </div>
+    </div>
+  </div>
 
   <!-- HERO -->
   <section class="hero" id="home">
@@ -125,7 +150,7 @@
           <div class="term-body">
             <div class="tl"><span class="tp">›</span><span class="tk">name:</span><span class="tv tc">Faizan Tariq</span></div>
             <div class="tl"><span class="tp">›</span><span class="tk">location:</span><span class="tv">Hugam, J&amp;K 🇮🇳</span></div>
-            <div class="tl"><span class="tp">›</span><span class="tk">education:</span><span class="tv tv">Software Eng @ ILS</span></div>
+            <div class="tl"><span class="tp">›</span><span class="tk">education:</span><span class="tv">Software Eng @ ILS</span></div>
             <div class="tl"><span class="tp">›</span><span class="tk">building:</span><span class="tv tg">Pyskill 🧠</span></div>
             <div class="tl"><span class="tp">›</span><span class="tk">instagram:</span><span class="tv tr">@code_with_06</span></div>
             <div class="tl"><span class="tp">›</span><span class="tk">github:</span><span class="tv tc">luckyfaizu3-eng</span></div>
@@ -148,7 +173,7 @@
           <div class="edu-yr-row">
             <span class="edu-yr">Sep 2024 — Present</span>
             <span class="edu-timer">
-              <span class="timer-dot" style="background:var(--c2);box-shadow:0 0 10px var(--c2)"></span>
+              <span class="timer-dot"></span>
               <span id="edu-elapsed">1y 7mo</span>
             </span>
           </div>
@@ -281,20 +306,20 @@
         <p class="contact-sub rv d2">Open to freelance, collaborations, and full-time work. Python, web apps, Android — let's build something real together.</p>
         <div class="c-links rv d3">
           <a href="https://instagram.com/code_with_06" target="_blank" rel="noreferrer" class="c-link">
-            <div class="c-ico" style="background:rgba(251,113,133,0.08);border:1px solid rgba(251,113,133,0.2)">
-              <svg viewBox="0 0 24 24" fill="var(--rose)"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            <div class="c-ico" style="background:rgba(251,113,133,0.12);border:1px solid rgba(251,113,133,0.3)">
+              <svg viewBox="0 0 24 24" fill="#fb7185"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
             </div>
             <div><div class="c-lbl">Instagram</div><div class="c-val">@code_with_06</div></div>
           </a>
           <a href="https://github.com/luckyfaizu3-eng" target="_blank" rel="noreferrer" class="c-link">
-            <div class="c-ico" style="background:rgba(192,132,252,0.08);border:1px solid rgba(192,132,252,0.2)">
-              <svg viewBox="0 0 24 24" fill="#c084fc"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            <div class="c-ico" style="background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3)">
+              <svg viewBox="0 0 24 24" fill="#22c55e"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
             </div>
             <div><div class="c-lbl">GitHub</div><div class="c-val">luckyfaizu3-eng</div></div>
           </a>
           <a href="https://faizupyzone.shop" target="_blank" rel="noreferrer" class="c-link">
-            <div class="c-ico" style="background:rgba(165,148,249,0.08);border:1px solid rgba(165,148,249,0.25)">
-              <svg viewBox="0 0 24 24" fill="var(--c2)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            <div class="c-ico" style="background:rgba(20,184,166,0.1);border:1px solid rgba(20,184,166,0.3)">
+              <svg viewBox="0 0 24 24" fill="#14b8a6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
             </div>
             <div><div class="c-lbl">Website</div><div class="c-val">faizupyzone.shop</div></div>
           </a>
