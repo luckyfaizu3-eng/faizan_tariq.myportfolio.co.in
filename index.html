@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faizan Tariq — Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=Unbounded:wght@900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="spb" id="spb"></div>
+
+  <!-- CANVAS (starfield) -->
+  <canvas id="hero-canvas" class="hero-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">faizan<span>.dev</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://faizupyzone.shop" target="_blank" rel="noreferrer" class="nav-btn">↗ Pyskill</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-mesh"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-pill">
+        <span class="pill-dot"></span>
+        ILS Srinagar · Hugam, J&amp;K 🇮🇳 · Open to Work
+      </div>
+      <h1 class="hero-name">
+        Faizan
+        <span class="line2">Tariq.</span>
+      </h1>
+      <div class="hero-role">
+        <span id="typed-word"></span><span class="tcur"></span>
+      </div>
+      <p class="hero-sub">
+        Self-taught developer &amp; Software Engineering student. Building real products — from Python scripts to live web apps and native Android applications.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View Projects →</a>
+        <a href="#contact" class="btn-secondary">Get in Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://instagram.com/code_with_06" target="_blank" rel="noreferrer" class="soc">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          @code_with_06
+        </a>
+        <a href="https://github.com/luckyfaizu3-eng" target="_blank" rel="noreferrer" class="soc">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://faizupyzone.shop" target="_blank" rel="noreferrer" class="soc">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Pyskill
+        </a>
+      </div>
+    </div>
+    <div class="scroll-ind">
+      <div class="scroll-line"></div>
+      <span class="scroll-lbl">Scroll</span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marq">
+    <div class="marq-track" id="marq-track"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-n" data-target="6" data-suffix="+">0+</div>
+      <div class="stat-l">Technologies</div>
+      <div class="stat-bar"></div>
+    </div>
+    <div class="stat">
+      <div class="stat-n" data-target="1" data-suffix="">0</div>
+      <div class="stat-l">Live Product</div>
+      <div class="stat-bar"></div>
+    </div>
+    <div class="stat">
+      <div class="stat-n" data-target="100" data-suffix="%">0%</div>
+      <div class="stat-l">Self-Taught</div>
+      <div class="stat-bar"></div>
+    </div>
+    <div class="stat">
+      <div class="stat-n" data-target="3" data-suffix="+">0+</div>
+      <div class="stat-l">Years Coding</div>
+      <div class="stat-bar"></div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="sec">
+      <div class="stag rv">About Me</div>
+      <h2 class="sh rv d1">The Developer<br />Behind The <em>Code.</em></h2>
+      <div class="about-grid">
+        <div class="about-copy rvl d2">
+          <p>Hey — I'm <strong>Faizan Tariq</strong>, a self-taught developer from <span class="hl">Hugam, Anantnag, Jammu &amp; Kashmir 🇮🇳</span>. I started coding with Python and never stopped building.</p>
+          <p>I've completed <strong>Python end-to-end</strong>, mastered SQL, Firebase, and Supabase, built and deployed a <strong>live React web application</strong>, and develop native Android apps with <strong>Kotlin and Android Studio</strong>.</p>
+          <p>My biggest project is <strong>Pyskill</strong> — a free Python mock test platform where students earn real certificates. Built completely alone, from scratch, shipped live. Real users. Real results.</p>
+          <p>Currently pursuing <strong>Software Engineering</strong> at <span class="hl">ILS Srinagar</span> — bridging academic CS fundamentals with real-world product building. Find me on Instagram at <span class="hl">@code_with_06</span>.</p>
+        </div>
+        <div class="term rvr d3">
+          <div class="term-bar">
+            <span class="tdot" style="background:#ff5f57"></span>
+            <span class="tdot" style="background:#febc2e"></span>
+            <span class="tdot" style="background:#28c840"></span>
+            <span class="tttl">faizan.profile</span>
+          </div>
+          <div class="term-body">
+            <div class="tl"><span class="tp">›</span><span class="tk">name:</span><span class="tv tc">Faizan Tariq</span></div>
+            <div class="tl"><span class="tp">›</span><span class="tk">location:</span><span class="tv">Hugam, J&amp;K 🇮🇳</span></div>
+            <div class="tl"><span class="tp">›</span><span class="tk">education:</span><span class="tv tv">Software Eng @ ILS</span></div>
+            <div class="tl"><span class="tp">›</span><span class="tk">building:</span><span class="tv tg">Pyskill 🧠</span></div>
+            <div class="tl"><span class="tp">›</span><span class="tk">instagram:</span><span class="tv tr">@code_with_06</span></div>
+            <div class="tl"><span class="tp">›</span><span class="tk">github:</span><span class="tv tc">luckyfaizu3-eng</span></div>
+            <div class="tl"><span class="tp">›</span><span class="tk">website:</span><span class="tv tc">faizupyzone.shop</span></div>
+            <div class="tl"><span class="tp">›</span><span class="tk">status:</span><span class="tv tg">Open to Work ✅</span></div>
+            <div class="tl"><span class="tp">›</span><span class="tcursor">█</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <div class="edu-wrap" id="education">
+    <div class="edu-inner">
+      <div class="stag rv">Education</div>
+      <h2 class="sh rv d1">Where I'm <em>Learning.</em></h2>
+      <div class="edu-tl">
+        <div class="edu-item rv d2">
+          <div class="edu-yr-row">
+            <span class="edu-yr">Sep 2024 — Present</span>
+            <span class="edu-timer">
+              <span class="timer-dot" style="background:var(--c2);box-shadow:0 0 10px var(--c2)"></span>
+              <span id="edu-elapsed">1y 7mo</span>
+            </span>
+          </div>
+          <div class="edu-deg">Diploma in Software Engineering</div>
+          <div class="edu-sch">ILS Srinagar, Jammu &amp; Kashmir 🇮🇳</div>
+          <div class="edu-dsc">Studying core CS fundamentals — algorithms, data structures, software design, databases, and systems engineering. Applying everything directly to real projects and shipped products.</div>
+        </div>
+        <div class="edu-item rv d3">
+          <div class="edu-yr">2022 — 2024</div>
+          <div class="edu-deg">Self-Taught Developer</div>
+          <div class="edu-sch">The Internet — YouTube, Docs &amp; Projects</div>
+          <div class="edu-dsc">Learned Python end-to-end, SQL, Firebase, Supabase, React, Kotlin, and Android development entirely through self-study. Built Pyskill — a fully live, real-world product — before ever enrolling in formal education.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="skills-bg" id="skills">
+    <div class="skills-inner">
+      <div class="stag rv">Tech Stack</div>
+      <h2 class="sh rv d1">What I Build <em>With.</em></h2>
+      <div class="sk-grid">
+        <div class="sk-card rv" data-bars style="transition-delay:0s">
+          <div class="sk-ico">🐍</div>
+          <div class="sk-nm">Python</div>
+          <div class="sk-ds">End-to-end scripting, automation, backend logic.</div>
+          <div class="sk-tr"><div class="sk-fl" data-level="90"></div></div>
+          <div class="sk-pc">90%</div>
+        </div>
+        <div class="sk-card rv" data-bars style="transition-delay:0.08s">
+          <div class="sk-ico">🗄️</div>
+          <div class="sk-nm">SQL</div>
+          <div class="sk-ds">Relational databases, complex queries, data ops.</div>
+          <div class="sk-tr"><div class="sk-fl" data-level="82"></div></div>
+          <div class="sk-pc">82%</div>
+        </div>
+        <div class="sk-card rv" data-bars style="transition-delay:0.16s">
+          <div class="sk-ico">🔥</div>
+          <div class="sk-nm">Firebase</div>
+          <div class="sk-ds">Auth, Firestore, Realtime DB, Cloud Hosting.</div>
+          <div class="sk-tr"><div class="sk-fl" data-level="86"></div></div>
+          <div class="sk-pc">86%</div>
+        </div>
+        <div class="sk-card rv" data-bars style="transition-delay:0.24s">
+          <div class="sk-ico">⚡</div>
+          <div class="sk-nm">Supabase</div>
+          <div class="sk-ds">Postgres-powered backend for modern web apps.</div>
+          <div class="sk-tr"><div class="sk-fl" data-level="78"></div></div>
+          <div class="sk-pc">78%</div>
+        </div>
+        <div class="sk-card rv" data-bars style="transition-delay:0.32s">
+          <div class="sk-ico">⚛️</div>
+          <div class="sk-nm">React</div>
+          <div class="sk-ds">Built and shipped a live production web app.</div>
+          <div class="sk-tr"><div class="sk-fl" data-level="78"></div></div>
+          <div class="sk-pc">78%</div>
+        </div>
+        <div class="sk-card rv" data-bars style="transition-delay:0.40s">
+          <div class="sk-ico">📱</div>
+          <div class="sk-nm">Kotlin</div>
+          <div class="sk-ds">Native Android apps with Android Studio.</div>
+          <div class="sk-tr"><div class="sk-fl" data-level="72"></div></div>
+          <div class="sk-pc">72%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="sec">
+      <div class="stag rv">Featured Work</div>
+      <h2 class="sh rv d1">What I've <em>Shipped.</em></h2>
+    </div>
+    <div class="proj-sec">
+      <div class="proj-card rv">
+        <div class="proj-vis">
+          <div class="code-win">
+            <div class="cw-bar">
+              <div class="cwdots">
+                <span class="cwdot" style="background:#ff5f57"></span>
+                <span class="cwdot" style="background:#febc2e"></span>
+                <span class="cwdot" style="background:#28c840"></span>
+              </div>
+              <span class="cwtab">pyskill.jsx</span>
+            </div>
+            <div class="cw-body">
+              <div><span class="cc">// Pyskill — Live Platform</span></div>
+              <div><span class="ck">import</span> <span class="cf">React</span> <span class="cm">from</span> <span class="cs">'react'</span></div>
+              <div><span class="ck">import</span> <span class="cf">Firebase</span> <span class="cm">from</span> <span class="cs">'firebase'</span></div>
+              <br/>
+              <div><span class="ck">const</span> <span class="cf">Pyskill</span> = () =&gt; {</div>
+              <div class="indent"><span class="ck">const</span> tests = <span class="cs">'Python'</span></div>
+              <div class="indent"><span class="ck">const</span> certs = <span class="cn">true</span></div>
+              <div class="indent"><span class="ck">const</span> free = <span class="cn">true</span></div>
+              <div class="indent"><span class="ck">return</span> <span class="cf">&lt;Platform /&gt;</span></div>
+              <div>}</div>
+              <br/>
+              <div><span class="cf">export default</span> Pyskill</div>
+              <div class="code-cursor">▋</div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-info">
+          <div class="live-badge"><span class="lb-dot"></span>Live &amp; Running</div>
+          <h3 class="proj-ttl">Py<em>skill</em></h3>
+          <p class="proj-dsc">A fully live platform where students take <strong>free Python mock tests</strong> and earn <strong>real certificates</strong> on passing. Built completely alone — design, code, deployment. Real users. Real results.</p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Certificates</span>
+            <span class="tag">Live</span>
+            <span class="tag">Free Platform</span>
+            <span class="tag">Auth</span>
+          </div>
+          <a href="https://faizupyzone.shop" target="_blank" rel="noreferrer" class="proj-lnk">↗ Visit Pyskill</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <div class="contact-bg" id="contact">
+    <div class="contact-inner">
+      <div>
+        <div class="stag rv">Let's Connect</div>
+        <h2 class="contact-h rv d1">Got a project<br /><em>in mind?</em></h2>
+        <p class="contact-sub rv d2">Open to freelance, collaborations, and full-time work. Python, web apps, Android — let's build something real together.</p>
+        <div class="c-links rv d3">
+          <a href="https://instagram.com/code_with_06" target="_blank" rel="noreferrer" class="c-link">
+            <div class="c-ico" style="background:rgba(251,113,133,0.08);border:1px solid rgba(251,113,133,0.2)">
+              <svg viewBox="0 0 24 24" fill="var(--rose)"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </div>
+            <div><div class="c-lbl">Instagram</div><div class="c-val">@code_with_06</div></div>
+          </a>
+          <a href="https://github.com/luckyfaizu3-eng" target="_blank" rel="noreferrer" class="c-link">
+            <div class="c-ico" style="background:rgba(192,132,252,0.08);border:1px solid rgba(192,132,252,0.2)">
+              <svg viewBox="0 0 24 24" fill="#c084fc"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+            <div><div class="c-lbl">GitHub</div><div class="c-val">luckyfaizu3-eng</div></div>
+          </a>
+          <a href="https://faizupyzone.shop" target="_blank" rel="noreferrer" class="c-link">
+            <div class="c-ico" style="background:rgba(165,148,249,0.08);border:1px solid rgba(165,148,249,0.25)">
+              <svg viewBox="0 0 24 24" fill="var(--c2)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </div>
+            <div><div class="c-lbl">Website</div><div class="c-val">faizupyzone.shop</div></div>
+          </a>
+        </div>
+      </div>
+      <div class="rvr d2">
+        <div class="fc" id="contact-form-wrap">
+          <div class="fc-ttl">Send a Message</div>
+          <div class="frow">
+            <div class="fg"><label class="fl">Your Name</label><input class="fi" id="f-name" placeholder="John Doe" /></div>
+            <div class="fg"><label class="fl">Email</label><input class="fi" id="f-email" type="email" placeholder="you@email.com" /></div>
+          </div>
+          <div class="fg"><label class="fl">Subject</label><input class="fi" id="f-subject" placeholder="Let's collaborate..." /></div>
+          <div class="fg"><label class="fl">Message</label><textarea class="fi" id="f-message" placeholder="Tell me about your project..."></textarea></div>
+          <div class="ferr" id="f-err" style="display:none"></div>
+          <button class="fsub" id="f-submit">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">faizan<span>.dev</span></div>
+    <div class="footer-r">© 2026 · Hugam, Anantnag, J&amp;K 🇮🇳</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
